@@ -1,4 +1,0 @@
-Adminer https://adminer.org
-
-Download Below
-https://github.com/vrana/adminer/releases/
