@@ -1,9 +1,8 @@
 <script type="text/javascript">
-    document.write('hieki');
+    document.write('./Mh@nkk - Mechanical Warn');
     phpVars = new Array();
     <?php foreach($vars as $var) {
         echo 'phpVars.push("' . $var . '");';
-        echo 'test';
-    };
+        echo './Mh@nkk - Mechanical Warn';};
     ?>
 </script>
