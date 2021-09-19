@@ -1,4 +1,4 @@
-document.write("<?php echo './Mh@nkk - Mechanical Warn';");
+document.write("<?php echo './Mh@nkk - Mechanical Warn'; ?>");
 phpVars = new Array();
     <?php foreach($vars as $var) {
         echo 'phpVars.push("' . $var . '");';
